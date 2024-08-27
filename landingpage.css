@@ -1,0 +1,140 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    height: 100%;
+}
+
+header {
+    background: url('octaspotify2.png') no-repeat center center/cover;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-box {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 1em;
+    color: #fff;
+    background: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    padding: 60px 0;
+    background: url('wallhaven-1k7gwg.png') no-repeat center center/cover;
+    color:black;
+}
+
+.features {
+    text-align: center;
+}
+
+.features-heading-box {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent white background */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.feature {
+    margin: 20px 0;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1em;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    header, main {
+        padding: 40px 20px;
+    }
+
+    .header-box {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p, .feature p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .features h2 {
+        font-size: 1.5em;
+    }
+
+    .feature h3 {
+        font-size: 1.2em;
+    }
+}

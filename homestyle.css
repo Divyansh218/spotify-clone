@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+header {
+    background: url('header-background.jpg') no-repeat center center/cover;
+    padding: 60px 0;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-box {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 1em;
+    color: #fff;
+    background: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+main {
+    padding: 60px 0;
+    background: url('main-background.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.features {
+    text-align: center;
+}
+
+.features-heading-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.feature {
+    margin: 20px 0;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1em;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    header, main {
+        padding: 40px 20px;
+    }
+
+    .header-box {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p, .feature p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .features h2 {
+        font-size: 1.5em;
+    }
+
+    .feature h3 {
+        font-size: 1.2em;
+    }
+
+    .cover {
+        width: 100%;
+        height: auto;
+        margin: 15px 0;
+    }
+
+    .cover img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        margin: 10px 20px;
+    }
+
+    .features-heading-box {
+        width: auto;
+        margin: 20px 20px;
+    }
+
+    .card {
+        display: block;
+        text-align: center;
+    }
+
+    .image img {
+        margin: 20px auto;
+        display: block;
+    }
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    background-color: black;
+    color: green;
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.brand img {
+    width: 44px;
+    padding: 0 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.cover {
+    margin: 15px auto;
+    width: 80%;
+    height: auto;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.box img {
+    height: 200px;
+    width: 200px;
+}
+
+.card {
+    width: 100%;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.image img {
+    margin: 0 auto;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.button {
+    display: block;
+    text-align: center;
+    margin: 10px;
+    padding: 10px 20px;
+    background: rgb(157, 111, 227); /* Medium purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: rgb(123, 81, 174); /* Darker purple */
+}
+
+button {
+    background-color: black;
+    color: aliceblue;
+    padding: 0px;
+    margin: 5px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    border-style: double;
+}
+
+button:hover {
+    letter-spacing: 0.10em;
+}
+
+h1, h3 {
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 20px;
+}
+
+h1 {
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+h3 {
+    height: 25px;
+    margin: 20px auto;
+    width: fit-content;
+    padding: 0 20px;
+    background-color: rgb(157, 111, 227); /* Medium purple */
+}
