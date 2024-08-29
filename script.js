@@ -5,7 +5,6 @@ let songIndex = 0;
 let audioElement = new Audio('songs/1.mp3');
 let masterPlay = document.getElementById('masterPlay');
 let myProgressBar = document.getElementById('myProgressBar');
-let gif = document.getElementById('gif');
 let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItemPlay'));
 
@@ -18,50 +17,48 @@ let songs = [
 ];
 
 // Handle play/pause click
-masterPlay.addEventListener('click', ()=>{
-    if(audioElement.paused || audioElement.currentTime<=0){
+masterPlay.addEventListener('click', () => {
+    if (audioElement.paused || audioElement.currentTime <= 0) {
         audioElement.play();
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
-        gif.style.opacity = 1;
-    }
-    else{
+    } else {
         audioElement.pause();
         masterPlay.classList.remove('fa-pause-circle');
         masterPlay.classList.add('fa-play-circle');
-        gif.style.opacity = 0;
     }
 });
 
-// Listen to Events
-audioElement.addEventListener('timeupdate', ()=>{ 
-    // Update Seekbar
-    progress = parseInt((audioElement.currentTime/audioElement.duration)* 100); 
+// Update progress bar as the song plays
+audioElement.addEventListener('timeupdate', () => {
+    let progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
     myProgressBar.value = progress;
 });
 
-myProgressBar.addEventListener('change', ()=>{
-    audioElement.currentTime = myProgressBar.value * audioElement.duration/100;
+// Change the song's current time when progress bar value changes
+myProgressBar.addEventListener('change', () => {
+    audioElement.currentTime = myProgressBar.value * audioElement.duration / 100;
 });
 
-const makeAllPlays = ()=>{
-    Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
+// Function to remove play icons from all song items
+const makeAllPlays = () => {
+    songItems.forEach((element) => {
         element.classList.remove('fa-pause-circle');
         element.classList.add('fa-play-circle');
     });
 };
 
-songItems.forEach((element, i)=>{
-    element.addEventListener('click', (e)=>{
+// Handle song item click
+songItems.forEach((element, i) => {
+    element.addEventListener('click', (e) => {
         makeAllPlays();
         songIndex = parseInt(e.target.id);
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
-        audioElement.src = `songs/${songIndex+1}.mp3`;
+        audioElement.src = `songs/${songIndex + 1}.mp3`;
         masterSongName.innerText = songs[songIndex].songName;
         audioElement.currentTime = 0;
         audioElement.play();
-        gif.style.opacity = 1;
         masterPlay.classList.remove('fa-play-circle');
         masterPlay.classList.add('fa-pause-circle');
     });
