@@ -8,7 +8,7 @@ body, html {
 
 header {
     background: url('octaspotify2.png') no-repeat center center/cover;
-    padding: 60px 0;
+    padding: 60px 20px;
     text-align: center;
     color: white;
     display: flex;
@@ -44,11 +44,12 @@ header p {
     border-radius: 5px;
     text-decoration: none;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 .cta-button:hover {
     background: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .container {
@@ -59,19 +60,15 @@ header p {
 }
 
 main {
-    padding: 60px 0;
+    padding: 60px 20px;
     background: url('wallhaven-1k7gwg.png') no-repeat center center/cover;
-    color:black;
-}
-
-.features {
-    text-align: center;
+    color: black;
 }
 
 .features-heading-box {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent white background */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
     padding: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
@@ -84,13 +81,31 @@ main {
     margin: 0;
 }
 
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 .feature {
-    margin: 20px 0;
+    flex: 1 1 calc(33% - 20px);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .feature h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: #007BFF;
 }
 
 .feature p {
@@ -136,5 +151,13 @@ footer p {
 
     .feature h3 {
         font-size: 1.2em;
+    }
+
+    .features-grid {
+        flex-direction: column;
+    }
+
+    .feature {
+        flex: 1 1 100%;
     }
 }
