@@ -8,6 +8,7 @@ body {
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 nav {
@@ -131,13 +132,63 @@ button:hover {
     font-family: 'Varela Round', sans-serif;
 }
 
-.songInfo img {
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
+@media (max-width: 1100px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .songItem img {
+        width: 30px;
+        margin: 0 10px;
+    }
+
+    .songItem {
+        height: 40px;
+    }
+
+    .icons i {
+        font-size: 2rem;
+    }
+
+    #myProgressBar {
+        width: 90vw;
+    }
+
+    .songInfo {
+        left: 5vw;
+    }
 }
 
-@media only screen and (max-width: 1100px) {
-    body {
-        background-color: red;
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .songList {
+        width: 100%;
+    }
+
+    .songItemContainer {
+        margin-top: 30px;
+    }
+
+    .bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .icons {
+        margin-top: 0;
+    }
+
+    #myProgressBar {
+        width: 70vw;
+    }
+
+    .songInfo {
+        position: static;
+        text-align: center;
     }
 }
